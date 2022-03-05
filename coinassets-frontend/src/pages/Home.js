@@ -1,7 +1,19 @@
-import React from 'react'
+import axios from 'axios';
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [coinsList, setCoinsList]=useState([]);
+  console.log(coinsList);
+  useEffect(()=>{
+    fetchData()
+  }, []);
+  const fetchData = async ()=>{
+    const res = await axios.get('https://api.coinstats.app/public/v1/coins?skip=0&limit=100&curreny=USD')
+    if(!res.erros) setCoinsList(res.data.coins)
+    else setCoinsList([]);
+  }
+  console.log(coinsList);
   return (
-    <div>Home</div>
+    <main>Home</main>
   )
 }
