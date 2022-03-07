@@ -2,6 +2,10 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 // import CoinData from '../components/CoinData';
 import CoinsTable from '../components/CoinsTable';
+// import LogoutButton from '../components/LoginButton';
+import LoginButton from '../components/LoginButton';
+import LogoutButton from '../components/LogoutButton';
+import { Profile } from '../components/Profile';
 
 export default function Home() {
   const [coinsList, setCoinsList]=useState([]);
@@ -17,7 +21,9 @@ export default function Home() {
   console.log(coinsList);
   return (
     <main>
-      <CoinsTable coinsList={coinsList}/>
+      <div className="container">
+        <CoinsTable coinsList={coinsList}/>
+      </div>
     </main>
   )
 }

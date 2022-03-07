@@ -5,7 +5,7 @@ export default function CoinsTable({coinsList}) {
     console.log(coinsList);
   return (
     <div>
-        <table className="table table-striped table-hover">
+        <table className="table table-striped table-hover text-nowrap bg-white">
         <thead>
           <tr>
             <th>Rank</th>
@@ -14,7 +14,7 @@ export default function CoinsTable({coinsList}) {
             <th>Market Cap</th>
             <th>Price</th>
             <th>Available Supply</th>
-            <th>Volume 24hrs</th>
+            {/* <th>Volume 24hrs</th> */}
             <th>Watch</th>
           </tr>
         </thead>

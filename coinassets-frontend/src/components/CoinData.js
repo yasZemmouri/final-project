@@ -1,8 +1,6 @@
-import React from 'react'
+import { MoneyLayout, CountLayout } from "../utilities/NumsLayout"
 
 export default function CoinData({coin}) {
-    console.log('coinsData list: ');
-    console.log(coin);
   return (
     <tr>
         <td>{coin.rank}</td>
@@ -11,10 +9,10 @@ export default function CoinData({coin}) {
                   <span> {coin.name}</span>
         </td>
         <td>{coin.symbol}</td>
-        <td>{coin.marketCap}</td>
-        <td>{coin.price}</td>
-        <td>{coin.availableSupply}</td>
-        <td>{coin.volume}</td>
+        <td>{MoneyLayout(coin.marketCap)}</td>
+        <td>{MoneyLayout(coin.price)}</td>
+        <td>{CountLayout(coin.availableSupply)}</td>
+        {/* <td>{MoneyLayout(coin.volume.toString)}</td> */}
     </tr>
   )
 }
