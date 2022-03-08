@@ -23,14 +23,19 @@ export const GlobalProvider = (props)=>{
     const addCoinToWatchlist = (coin)=>{
         dispatch({type: "ADD_COIN_TO_WATCHLIST", payload: coin});
     };
+    const removeCoinFromWatchlist = (id)=>{
+        dispatch({ type: "REMOVE_COIN_FROM_WATCHLIST", payload: id });
+    }
 
     return(
         <GlobalContext.Provider
             value={{
                 watchlist: state.watchlist,
-                addCoinToWatchlist
-            }}>
-                {props.children}
+                addCoinToWatchlist,
+                removeCoinFromWatchlist,
+            }}
+        >
+            {props.children}
         </GlobalContext.Provider>
     );
 };

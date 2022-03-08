@@ -4,15 +4,37 @@ import { GlobalContext } from '../context/GlobalState';
 export const WishBtn = ({coin}) => {
     const {
         addCoinToWatchlist,
+        removeCoinFromWatchlist,
         watchlist,
     }=useContext(GlobalContext)
-    const [starColor, setStarColor]=useState(false);
+    let x = watchlist.filter(o=>o.id === coin.id);
+    console.log('coin.id');
+    console.log(coin.id);
+    console.log('watchlist');
+    console.log(watchlist);
+    console.log('x');
+    console.log(x);
+    const [starColor, setStarColor]=useState(()=>{
+        if(x.length> 0){
+            return true;
+        }else {
+            return false;
+        }
+    });
+    console.log('starColor');
+    console.log(starColor);
+  
   return (
     <button 
     // disabled={watchlistDisabled}
     onClick={() => {
-      addCoinToWatchlist(coin)
+        if(!starColor){
+      addCoinToWatchlist(coin);
       setStarColor(!starColor);
+        }else{
+            removeCoinFromWatchlist(coin.id);
+            setStarColor(!starColor);
+        }
       }
     }
   >

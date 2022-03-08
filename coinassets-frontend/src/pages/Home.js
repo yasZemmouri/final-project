@@ -32,9 +32,9 @@ export default function Home() {
         })
       }catch(err){
         console.log(err)
-      }
-      
+      }   
     }
+    setQuery('');
   }
   const fetchData = async ()=>{
     const res = await axios.get('https://api.coinstats.app/public/v1/coins?skip=0&limit=100&curreny=USD')
