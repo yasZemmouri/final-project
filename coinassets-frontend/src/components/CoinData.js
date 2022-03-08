@@ -32,7 +32,7 @@ const { isAuthenticated }=useAuth0();
         { isAuthenticated && (
         <td>
           <div className="controls">
-            <WishBtn/>
+            <WishBtn coin={coin}/>
           {/* <button
             className="btn"
             disabled={watchedDisabled}

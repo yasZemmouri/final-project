@@ -4,7 +4,7 @@ export default function LogoutButton() {
     const { logout, isAuthenticated } = useAuth0();
     return (
     isAuthenticated && (
-    <button type="button" class="btn btn-primary" onClick={()=>logout()}>
+    <button type="button" className="btn btn-primary" onClick={()=>logout()}>
         Logout
     </button>
     )

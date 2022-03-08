@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
-export const WishBtn = () => {
+export const WishBtn = ({coin}) => {
+    const {
+        addCoinToWatchlist,
+        watchlist,
+    }=useContext(GlobalContext)
     const [starColor, setStarColor]=useState(false);
   return (
     <button 
     // disabled={watchlistDisabled}
     onClick={() => {
-      // addCoinToWatchlist(coin)
+      addCoinToWatchlist(coin)
       setStarColor(!starColor);
       }
     }

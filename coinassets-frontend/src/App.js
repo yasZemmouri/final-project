@@ -7,9 +7,11 @@ import Login from './pages/Login';
 import Nav from './components/Nav';
 //Style
 import './App.css';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
+  <GlobalProvider>
     <Router>
       <Nav/>
       <Routes>
@@ -21,6 +23,7 @@ function App() {
 
       </Routes>
     </Router>
+    </GlobalProvider>
   );
 }
 
