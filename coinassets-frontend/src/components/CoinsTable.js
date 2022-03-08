@@ -1,6 +1,8 @@
 import CoinData from "./CoinData";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function CoinsTable({coinsList}) {
+  const { isAuthenticated }=useAuth0();
     console.log('coinsTable list: ');
     console.log(coinsList);
   return (
@@ -15,7 +17,9 @@ export default function CoinsTable({coinsList}) {
             <th>Price</th>
             <th>Available Supply</th>
             {/* <th>Volume 24hrs</th> */}
-            <th>Watch</th>
+            {isAuthenticated && (
+              <th>Watch</th>
+            )}
           </tr>
         </thead>
         <tbody>

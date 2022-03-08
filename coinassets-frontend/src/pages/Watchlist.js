@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Watchlist() {
   return (
-    <div>Watchlist</div>
+    <div className="container">
+      <div>Watchlist</div>
+    </div>
   )
 }

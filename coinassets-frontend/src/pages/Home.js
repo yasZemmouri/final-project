@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <main>
       <div className="container">
+        <h1>Dashboard</h1>
         <CoinsTable coinsList={coinsList}/>
       </div>
     </main>
