@@ -9,7 +9,7 @@ import CoinsTable from '../components/CoinsTable';
 export default function Home() {
   const [query, setQuery]=useState('');
   //are you sure it's an array
-  const [result, setResult]= useState([])
+  const [result, setResult]= useState({})
   const [coinsList, setCoinsList]=useState([]);
   console.log(coinsList);
   useEffect(()=>{
@@ -20,7 +20,21 @@ export default function Home() {
   }
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log('searching for ' + query);
+    if(query){
+      console.log('searching for ' + query);
+      try{
+        axios.get(`https://api.coinstats.app/public/v1/coins/${query.trim().toLowerCase().replace(' ', '-')}?currency=USD`)
+        .then(res=>{
+          const data = res.data.coin;
+          setResult(data);
+          console.log(result);
+
+        })
+      }catch(err){
+        console.log(err)
+      }
+      
+    }
   }
   const fetchData = async ()=>{
     const res = await axios.get('https://api.coinstats.app/public/v1/coins?skip=0&limit=100&curreny=USD')
