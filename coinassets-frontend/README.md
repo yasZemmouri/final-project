@@ -3,6 +3,7 @@ extremly big numbers.
 currency of extremly small numbers.
 talk about auth0 and makefile and .env
 make git m="your message" to add . commit -m "message" push
+my table doens't automatically update
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -16,9 +16,9 @@ export default function Nav() {
       <ul className="navbar-nav">
         {isAuthenticated && (
           <>
-            <li className="nav-item">
+            <li className="nav-item px-2">
             <Link to='/watchlist'>Watch List</Link></li>
-            <li className="nav-tem"><Link to='/assets'>Assets</Link></li>
+            <li className="nav-tem px-2"><Link to='/assets'>Assets</Link></li>
             {/*<li className="nav-tem"><Link to='/login'>Login</Link></li> */}
             <li><img src={user.picture} alt={user.name} id="profile-pic"/></li>
 
