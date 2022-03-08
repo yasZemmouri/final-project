@@ -30,9 +30,9 @@ const { isAuthenticated }=useAuth0();
         {/* <td>{MoneyLayout(coin.volume.toString)}</td> */}
         { isAuthenticated && (
         <td>
-                  <div className="controls">
+          <div className="controls">
           <button 
-            
+       
             // disabled={watchlistDisabled}
             onClick={() => {
               // addCoinToWatchlist(coin)
