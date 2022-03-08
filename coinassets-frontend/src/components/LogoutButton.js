@@ -4,7 +4,11 @@ export default function LogoutButton() {
     const { logout, isAuthenticated } = useAuth0();
     return (
     isAuthenticated && (
-    <button type="button" className="btn btn-primary" onClick={()=>logout()}>
+    <button type="button" className="btn btn-primary" onClick={()=>{
+      logout();
+      localStorage.clear();
+      //send watchlist to backend
+      }}>
         Logout
     </button>
     )
