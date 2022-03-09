@@ -1,6 +1,15 @@
+body{
+    min-height: 100vh;
+}
 #profile-pic{
     width: 2rem;
     height: auto;
     border-radius: 60%;
     margin: 0 15px;
+}
+main{
+    padding-top: 70px !important;
+}
+input{
+    max-width: 500px;
 }

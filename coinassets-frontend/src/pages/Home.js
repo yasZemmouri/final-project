@@ -46,8 +46,8 @@ export default function Home() {
     <main>
       <div className="container">
         <h1>Dashboard</h1>
-        <form className="d-flex m-2 mx-auto" onSubmit={handleSubmit}>
-          <input type="search" id="query" className="form-control me-2" placeholder="Enter coin's name..."
+        <form className="d-flex m-2 mx-auto justify-content-center my-4" onSubmit={handleSubmit}>
+          <input type="search" id="query" className="form-control me-2 " placeholder="Enter coin's name..."
           aria-label="Search"
           onChange={handleChange}
           value={query}/>

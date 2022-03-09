@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 export default function Nav() {
   const { user, isAuthenticated } = useAuth0();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
       <div className="container flex-row">
         <Link to='/' className="navbar-brand">coinAssets</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
