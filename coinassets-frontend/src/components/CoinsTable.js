@@ -7,7 +7,7 @@ export default function CoinsTable({coinsList}) {
     console.log(coinsList);
   return (
     <div>
-        <table className="table table-striped table-hover text-nowrap bg-white">
+        <table className="table table-striped table-hover bg-white">
         <thead>
           <tr>
             <th>Rank</th>

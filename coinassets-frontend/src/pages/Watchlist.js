@@ -9,11 +9,17 @@ export default function Watchlist() {
   return (
     <main>
       <div className="container">
+        <div className="navix">
         <h1>My Watchlist</h1>
-        <span>{watchlist.length} {watchlist.length === 1 ? "coin"
+        <span className="count-pill">{watchlist.length} {watchlist.length === 1 ? "coin"
         : "coins"}
         </span>
-        <CoinsTable coinsList={watchlist}/>
+      </div>
+        {watchlist.length> 0 ? (
+          <CoinsTable coinsList={watchlist}/>
+        ):
+        <h2 className="no-coins">No coins in your watchlist! Add some!</h2>
+        }
       </div>
     </main>
   )
