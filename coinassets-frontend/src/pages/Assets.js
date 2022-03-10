@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Assets() {
   return (
-    <main clasName="pt-6">
+    <main>
       <div className="container">
         <h1>Assets</h1>
       </div>
