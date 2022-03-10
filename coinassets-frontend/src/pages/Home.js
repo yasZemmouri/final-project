@@ -7,7 +7,7 @@ import { Form } from '../components/Form';
 export default function Home() {
   const [query, setQuery]=useState('');
   //are you sure it's an array
-  const [result, setResult]= useState({})
+  const [result, setResult]= useState({});
   const [coinsList, setCoinsList]=useState([]);
   console.log(coinsList);
   useEffect(()=>{
