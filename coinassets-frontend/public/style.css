@@ -1,5 +1,16 @@
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+a:hover{
+    opacity: 0.6;
+}
 body{
+    font-family: "Source Sans Pro", sans-serif !important;
     min-height: 100vh;
+    background-color: #e2e0e0 ;
 }
 #profile-pic{
     width: 2rem;
@@ -9,12 +20,13 @@ body{
 }
 main{
     padding-top: 30px !important;
+    
 }
 input{
     max-width: 500px;
 }
 .no-coins {
-    color: #c4c4c4;
+    color: #adacac;
     font-size: 3rem;
     text-align: center;
 }
@@ -23,15 +35,16 @@ input{
   background-color: #21d07a;
   padding: 5px 15px;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 999px;
-  color: var(--primary);
+  color: #032541;
 
 }
 .navix{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 ul{
     list-style: none;
@@ -40,4 +53,24 @@ ul{
     th:nth-child(1), th:nth-child(4),th:nth-child(6), td:nth-child(1), td:nth-child(4), td:nth-child(6), li img {
         display: none
     }
+}
+
+ul{
+    align-items: center;
+}
+.logo {
+    color: #0052ff !important;
+    font-weight: bold;
+    font-size: 1.8rem !important;
+}
+h1{
+    font-weight: 700 !important;
+}
+input{
+    background-color: #032541 !important;
+    font-size: 1.4rem !important;
+    color: white !important;
+}
+::placeholder{
+    color: rgb(158, 157, 157) !important
 }

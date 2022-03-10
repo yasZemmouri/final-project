@@ -7,12 +7,12 @@ export default function Nav() {
   const { user, isAuthenticated } = useAuth0();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white">
-      <div className="container flex-row">
-        <Link to='/' className="navbar-brand">coinAssets</Link>
+      <div className="container">
+        <Link to='/' className="navbar-brand logo">coinAssets</Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{flexGrow: 0}}>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         {isAuthenticated && (
           <>
@@ -23,8 +23,8 @@ export default function Nav() {
           </>
           )
         }
-          <li><LoginButton/></li>
-          <li><LogoutButton/></li>
+          <li className="nav-tem"><LoginButton/></li>
+          <li className="nav-tem"><LogoutButton/></li>
       </ul>
     
       </div>
